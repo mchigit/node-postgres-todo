@@ -9,7 +9,7 @@ const databaseConfig = JSON.parse(fs.readFileSync('./models/config.json')).devel
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.sendFile('index.html');
 });
 
 router.post('/api/v1/todos', (req, res, next) => {
